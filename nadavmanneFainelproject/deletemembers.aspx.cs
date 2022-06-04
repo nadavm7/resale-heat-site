@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class Default3 : System.Web.UI.Page
+{
+    public string st = "";
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        string sql = "select * from tUsers";
+        System.Data.DataTable dt = MyDbase.SelectFromTable(sql, "Database2.mdb");
+
+        st += "<table bolder='1'>";
+        st += "<tr><td>שם פרטי</td><td>שם משפחה </td><td>אימייל</td><td>סיסמא</td><td>גיל</td><td>צבעים אהובים</td><td>מותגים אהובים</td><td>מחק</td></tr>";
+        for (int i = 0; i < dt.Rows.Count; i++)
+        {
+            st += "<tr>";
+            for (int j = 0; j < dt.Columns.Count; j++)
+            {
+                st += "<td>";
+                st += dt.Rows[i][j];
+                st += "</td>";
+
+            }
+            st += "<td><a href = delete.aspx?fff=" + dt.Rows[i]["firstName"] + ">מחק</a></td>";
+            st += "</tr>";
+        }
+        st += "</table>";
+    }
+}

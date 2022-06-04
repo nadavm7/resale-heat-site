@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        img.typeTafrit {
+            width:100px;
+            height:50px
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body dir ="rtl" , style="background-color:lavender">
+    <h1 style="text-align:center">האתר של נדב </h1>
+<table border="0" style="width:90%;height:1000px" align="center">
+   <tr style="height:200px;text-align:center">
+      <td>               
+                   <a href="login.aspx">
+                       <img src="imag/כניסה.jpg" class="typeTafrit"/>
+                    </a>
+                <a href="odot.aspx">
+                    <img src="imag/אודות.jpg" class="typeTafrit"/></a>
+                
+                <a href="harshama.aspx">
+                    <img src="imag/הרשמה.jpg" class="typeTafrit"/></a>
+            
+                <a href="searchmembers.aspx">
+                    <img src="imag/חיפוש.jpg" class="typeTafrit"/></a>
+             
+                <a href="showallmembers.aspx">
+                    <img src="imag/הצגת%20.jpg" class="typeTafrit"/></a>
+            
+                <a href="updatedetails.aspx">
+                    <img src="imag/עדכון.jpg" class="typeTafrit"/></a>
+
+                <a href="homepage.aspx">
+                    <img src="imag/דףהבית.jpg" class="typeTafrit"/></a>
+
+                <a href="gallery.aspx">
+                    <img src="imag/גלריה.jpg" class="typeTafrit"/></a>
+
+                <a href="exit.aspx">
+                    <img src="imag/יציאה.jpg" class="typeTafrit"/></a>
+
+                <a href="deletemembers.aspx">
+                    <img src="imag/מחיקה.jpg" class="typeTafrit"/></a>
+
+          </td>
+       </tr>
+         
+               <tr style="vertical-align:top">
+                   <td>
+          
+         
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+          </td>
+      </tr>
+    <tr style="height:200px">
+        <td>
+           <h3 style="text-align:center">Nadav Manne </h3>  <h6 style="text-align:center">MT </h6>
+        </td>
+    </tr>
+  </table>
+    
+</body>
+
+</html>
