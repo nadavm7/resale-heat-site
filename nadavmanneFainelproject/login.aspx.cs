@@ -15,7 +15,7 @@ public partial class Default6 : System.Web.UI.Page
             string firstName = Request.Form["firstName"];
             string gmail = Request.Form["gmail"];
             string password = Request.Form["password"];
-            if (firstName == "נדב" && gmail == "nadavmana@gmail.com")
+            if (firstName == "נדב" && gmail == "@@gmail.com")
             {
                 //מנהל
                 Response.Redirect("allsearchuser.aspx");
